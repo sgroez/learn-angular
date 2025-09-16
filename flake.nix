@@ -18,6 +18,7 @@
           f {
             pkgs = import nixpkgs {
               inherit system;
+              config.allowUnfree = true;
             };
           }
         );
@@ -31,6 +32,13 @@
               nodejs_24
               typescript
               nodePackages."@angular/cli"
+              (vscode-with-extensions.override {
+                vscodeExtensions = with vscode-extensions; [
+                  angular.ng-template
+                  esbenp.prettier-vscode
+                  eamodio.gitlens
+                ];
+              })
             ];
           };
         }
