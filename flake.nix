@@ -37,6 +37,7 @@
                   angular.ng-template
                   esbenp.prettier-vscode
                   eamodio.gitlens
+                  vscodevim.vim
                 ];
               })
             ];
